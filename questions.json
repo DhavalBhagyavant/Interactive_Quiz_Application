@@ -1,0 +1,19 @@
+[
+    {
+        "question": "What is the capital of France ?",
+        "options": ["Berlin", "Madrid", "Paris", "Lisbon"],
+        "correct": "Paris"
+    },
+
+    {
+        "question": "Which language is primarily used for web development ?",
+        "options": ["Python", "JavaScript", "C++", "Java"],
+        "correct": "JavaScript"
+    },
+
+    {
+        "question": "What does HTML stands for ?",
+        "options": ["Hyper Text Markup Language", "High Tech Modern Language", "Hyperlink and Text Management Language", "Home Tool Management Language"],
+        "correct": "Hyper Text Markup Language"
+    }
+]
