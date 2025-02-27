@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoader", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const questionElement = document.getElementById("question");
     const optionsElement = document.getElementById("options");
     const timerElement = document.getElementById("time");
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoader", () => {
 
     let currentQuestionIndex = 0;
     let score = 0;
-    let timeleft = 0;
+    let timeLeft = 10;
     let timer;
     let questions = [];
 
@@ -16,20 +16,21 @@ document.addEventListener("DOMContentLoader", () => {
         .then(data => {
             questions = data;
             loadQuestion();
-        });
+        })
+        .catch(error => console.error("Error loading questions:", error));
 
     function startTimer() {
         timeLeft = 10;
         timerElement.textContent = timeLeft;
         timer = setInterval(() => {
-            timeLeft --;
+            timeLeft--;
             timerElement.textContent = timeLeft;
-            if(timeLeft === 0) {
+            if (timeLeft === 0) {
                 clearInterval(timer);
                 nextQuestion();
             }
         }, 1000);
-    }        
+    }
 
     function loadQuestion() {
         clearInterval(timer);
@@ -40,7 +41,7 @@ document.addEventListener("DOMContentLoader", () => {
 
         currentQuestion.options.forEach(option => {
             const li = document.createElement("li");
-            li.textCOntent = option;
+            li.textContent = option;
             li.addEventListener("click", () => selectAnswer(option, currentQuestion.correct));
             optionsElement.appendChild(li);
         });
@@ -48,22 +49,23 @@ document.addEventListener("DOMContentLoader", () => {
 
     function selectAnswer(selected, correct) {
         clearInterval(timer);
-        if(selected === correct) {
-            score ++;
-            scoreElement.textContent = 'Score : ${score}';
+        if (selected === correct) {
+            score++;
+            scoreElement.textContent = `Score: ${score}`;
         }
         nextQuestion();
     }
 
     function nextQuestion() {
-        currentQuestionIndex ++;
-        if(currentQuestionIndex < questions.length) {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
             loadQuestion();
-        }else {
-            questionElement.textContent = "Quiz Completed !";
+        } else {
+            questionElement.textContent = "Quiz Completed!";
             optionsElement.innerHTML = "";
             nextButton.style.display = "none";
         }
     }
+
     nextButton.addEventListener("click", nextQuestion);
 });
