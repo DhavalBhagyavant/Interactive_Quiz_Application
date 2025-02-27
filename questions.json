@@ -1,19 +1,61 @@
 [
     {
-        "question": "What is the capital of France ?",
+        "question": "What is the capital of France?",
         "options": ["Berlin", "Madrid", "Paris", "Lisbon"],
         "correct": "Paris"
     },
 
     {
-        "question": "Which language is primarily used for web development ?",
+        "question": "Which language is primarily used for web development?",
         "options": ["Python", "JavaScript", "C++", "Java"],
         "correct": "JavaScript"
     },
-
+    
     {
-        "question": "What does HTML stands for ?",
+        "question": "What does HTML stand for?",
         "options": ["Hyper Text Markup Language", "High Tech Modern Language", "Hyperlink and Text Management Language", "Home Tool Management Language"],
         "correct": "Hyper Text Markup Language"
+    },
+    
+    {
+        "question": "Which planet is known as the Red Planet?",
+        "options": ["Earth", "Venus", "Mars", "Jupiter"],
+        "correct": "Mars"
+    },
+    
+    {
+        "question": "Who developed the theory of relativity?",
+        "options": ["Isaac Newton", "Albert Einstein", "Nikola Tesla", "Galileo Galilei"],
+        "correct": "Albert Einstein"
+    },
+    
+    {
+        "question": "Which is the largest ocean on Earth?",
+        "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+        "correct": "Pacific Ocean"
+    },
+    
+    {
+        "question": "What is the chemical symbol for Gold?",
+        "options": ["Au", "Ag", "Pb", "Fe"],
+        "correct": "Au"
+    },
+    
+    {
+        "question": "Who wrote 'Romeo and Juliet'?",
+        "options": ["Charles Dickens", "William Shakespeare", "Mark Twain", "Jane Austen"],
+        "correct": "William Shakespeare"
+    },
+    
+    {
+        "question": "Which gas do plants use for photosynthesis?",
+        "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+        "correct": "Carbon Dioxide"
+    },
+    
+    {
+        "question": "What is the smallest prime number?",
+        "options": ["0", "1", "2", "3"],
+        "correct": "2"
     }
 ]
